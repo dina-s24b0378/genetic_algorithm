@@ -23,7 +23,6 @@ st.write(
 # 2. LOAD CSV DATASET
 # ==========================================
 
-@st.cache_data
 def load_data():
     df = pd.read_csv("program_ratings.csv")
 
@@ -31,7 +30,6 @@ def load_data():
     df = df.set_index(first_column)
 
     return df.astype(float)
-
 
 try:
     ratings = load_data()
